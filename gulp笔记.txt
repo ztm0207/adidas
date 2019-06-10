@@ -1,0 +1,27 @@
+准备工作：安装node
+1、创建一个空的项目文件夹
+2=进入这个文件夹，执行npm init -y这个命令来初始化一个项目，这个时候在当前目录里会多处一个package.json文件，这个文件就是当前项目的一些描述信息
+3、在根目录新建一个src目录，从现在开始所有的代码html、scss、js都要写在src里
+4、构建咱们的项目（可以把写过的代码赋值到src里）require模块化的方式
+5、在整个项目根目录执行    npm install gulp@3（如果执行了这一步还是不能成功的话那就再全局安装一次，npm install gulp@3 -g）
+6、在整个项目根目录新建一个gulpfile.js，在这个文件里发布gulp任务（见代码）
+备注：接下来我们要安装各种插件来完成不同的任务，可以打开npmjs.com来进行搜索和查看安装方法
+7、压缩html，安装gulp-htmlmin这个插件，（npm install --save gulp-htmlmin）
+8、编译scss （npm install node-sass gulp-sass --save-dev）
+     压缩css （npm install gulp-clean-css --save-dev）
+9、开启服务器 （npm install --save-dev gulp-connect）
+10、移动libs
+
+11、js任务：
+      es6转es5，用gulp-babel  安装babel7
+          npm install --save-dev gulp-babel @babel/core @babel/preset-env
+      压缩
+         npm install --save-dev gulp-uglify
+12、watch监听文件的修改，执行对应的任务
+13、写一个default任务，把需要执行的任务全部放进来，使用的时候就直接 gulp 就好了
+14、在需要热更新的任务后面都加上一句 .pipe(connect.reload())
+     
+
+
+
+

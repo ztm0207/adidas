@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,ol li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+a {
+  text-decoration: none !important;
+}
+@import './model/header.scss';
+@import './model/footer.scss';
+.header-top {
+  margin-top:80px;
+  width: 100%;
+  height: 114px;
+  .annotation {
+    border-bottom: 1px solid #c8cbcc;
+    .execute {  
+      height: 40px;
+      width: 758px;
+      margin: 0 auto;
+      li {
+        float: left;
+        line-height: 40px;
+        margin-right: 140px;
+        font-size: 14px;
+        i{font-size: 18px !important;}
+          a {
+            margin-left: 5px;
+            color: black;
+          }
+      }
+    }
+  }
+  .shopnum {
+    height: 74px;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 35px;
+    .shopnum-h4 {
+      font-size: 18px;
+      margin-left: 5px;
+    }
+  }
+}
+main {
+  width: 1200px;
+  min-height: 500px;
+  margin: 0 auto;
+  display: flex;
+  .max-div {
+    
+    width: 230px;
+    min-height: 100px;
+    float: left;
+    label{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 13px;
+    }
+  }
+  .main-section {
+    width: 970px;
+    min-height: 200px;
+    padding-left: 20px;
+    float: right;
+    .main-section-top {
+      width: 100%;
+      height: 70px;
+    }
+    .main-section-center {
+      width: 100%;
+      min-height: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .main-section-center-div {
+        width: 230px;
+        height: 390px;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: black;
+          img {
+            width: 230px;
+            height: 230px;
+          }
+          ul {
+            width: 230;
+            height: 150px;
+            padding: 10px 0 0 10px;
+            font-size: 14px;
+            .ul-king {
+              color: #888888;
+              margin-bottom: 16px;
+            }
+            .ul-name {
+              margin-bottom: 28px;
+            }
+            .ul-money {
+              margin-bottom: 16px;
+            }
+            .ul-comment {
+              color: #888888;
+            }
+          }
+        }
+      }
+    }
+  }
+}

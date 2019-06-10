@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>就是仿阿迪</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/font/iconfont.css">
+    <script src="../libs/magnifying/jquery.min.js"></script>
+    <script src="../libs/magnifying/jquery.etalage.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function($){
+            $('#example3').etalage({
+                thumb_image_width: 446,
+                thumb_image_height: 400,
+                source_image_width:892,
+                source_image_height: 800,
+                zoom_area_width: 500,
+                zoom_area_height: 500,
+                zoom_area_distance: 5,
+                small_thumbs: 4,
+                smallthumb_inactive_opacity: 0.3,
+                smallthumbs_position: 'left',
+                show_icon: false,
+                autoplay: false,
+                keyboard: false,
+                zoom_easing: false
+            });
+        
+        });
+        </script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    
+    <script src="../libs/font/rem.js"></script>
+    <link rel="stylesheet" href="../css/particulars.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div class="header-top">
+        <div class="annotation">
+            <ul class="execute">
+                <li><i class="iconfont icon-che"></i><a href="">全场免运费</a></li>
+                <li><i class="iconfont icon-weibiaoti-"></i></span><a href="">尊享当日达、次日达、次晨达</a></li>
+                <li style="margin-right: 0px;"><i class="iconfont icon-huiche"></i><a href="">注册会员支持货到付款</a></li>
+            </ul>
+        </div>
+    </div>    
+    <main>  
+            <div class="mian-top">
+                    <div class="mian-top-img">
+                     <div id="examples">
+                         <ul id="example3">
+                             <li>
+                                 <img class="etalage_thumb_image" src='{{itme.imga}}'/>
+                                 <img class="etalage_source_image" src='{{itme.imga}}'/>
+                             </li>
+                             <li>
+                                 <img class="etalage_thumb_image" src='{{itme.imgb}}'/>
+                                 <img class="etalage_source_image" src='{{itme.imgb}}'/>
+                             </li>
+                             <li>
+                                 <img class="etalage_thumb_image" src='{{itme.imgc}}'/>
+                                 <img class="etalage_source_image" src='{{itme.imgc}}'/>
+                             </li>
+                             <li>
+                                 <img class="etalage_thumb_image" src='{{itme.imgd}}'/>
+                                 <img class="etalage_source_image" src='{{itme.imgd}}'/>
+                             </li>
+                             <li>
+                                 <img class="etalage_thumb_image" src='{{itme.imge}}' />
+                                 <img class="etalage_source_image" src='{{itme.imge}}'/>
+                             </li>
+                         </ul>
+                     </div>
+                    </div>
+                    <div class="mian-top-buy">
+                         <p><span>{{itme.name}}</span></p>
+                         <p>TEMPER RUN PRIDE 经典鞋</p>
+                         <p>¥<span>1099</span></p>
+                         <p>选择样式</p>
+                         <p></p>
+                    </div> 
+                 </div>
+                 <div class="mian-bottom">
+                     <ul id="myTab" class="nav nav-tabs">
+                         <li class="active">
+                               <a href="#home" data-toggle="tab" class="main-bottom-a"style="margin-left:181.5px">
+                              商品描述
+                                 </a>
+                        </li>
+                        <li>
+                            <a href="#ios" data-toggle="tab" class="main-bottom-a">
+                                商品评价(<span>255</span>)
+                             </a>
+                         </li>
+                     </ul>
+                 
+                     <div id="myTabContent" class="tab-content">
+                         <div class="tab-pane fade in active" id="home">
+                             <p>菜鸟教程。</p>
+                         </div>
+                         <div class="tab-pane fade" id="ios">
+                             <p>iOS 是一个由苹果公司</p>
+                         </div>
+                     </div>
+                 </div>
+    </main>
+    <footer></footer>
+    <script src="/libs/require/require.min.js" data-main="/js/particulars"></script>
+</body>
+</html>

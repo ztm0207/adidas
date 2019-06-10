@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>就是仿阿迪</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../libs/font/iconfont.css">
+    <script src="../libs/font/rem.js"></script>
+    <link rel="stylesheet" href="../css/shopping.css">
+</head>
+<body>
+    <div id="header">
+        
+    </div>
+    <div class="header-top">
+        <div class="annotation">
+            <ul class="execute">
+                <li><i class="iconfont icon-che"></i><a href="">全场免运费</a></li>
+                <li><i class="iconfont icon-weibiaoti-"></i></span><a href="">尊享当日达、次日达、次晨达</a></li>
+                <li style="margin-right: 0px;"><i class="iconfont icon-huiche"></i><a href="">注册会员支持货到付款</a></li>
+            </ul>
+        </div>
+        <div class="shopnum">
+            <h4 class="shopnum-h4">[ <span class="data-span">2135</span> 件商品]</h4>
+        </div>
+    </div>
+    <main>
+        <div class="max-div">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            性别
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="mui-input-row mui-radio ">
+                            <input name="man" type="checkbox" id="a"><label for="a">男子</label>
+                            <input name="woman" type="checkbox" id="b"><label for="b">女子</label><br>
+                            <input name="manchild" type="checkbox" id="c"><label for="c">男童</label>
+                            <input name="manchild" type="checkbox" id="d"><label for="d">女童</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            年龄段
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <input name="man" type="checkbox" id="e"><label for="e">大童（8-14岁）</label><br>
+                        <input name="woman" type="checkbox" id="f"><label for="f">小童（4-8岁）</label><br>
+                        <input name="manchild" type="checkbox" id="g"><label for="g">婴童（0-4岁）</label><br>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            产品分类
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <input name="man" type="checkbox" id="h"><label for="h">鞋类</label><br>
+                        <input name="woman" type="checkbox" id="i"><label for="i">服装</label><br>
+                        <input name="manchild" type="checkbox" id="j"><label for="j">箱包/附配件</label><br>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                            品牌
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <input name="man" type="checkbox" id="k"><label for="k">ORIGINALS</label><br>
+                        <input name="woman" type="checkbox" id="l"><label for="l">运动表现</label><br>
+                        <input name="manchild" type="checkbox" id="m"><label for="m">运动型格</label><br>
+                        <input name="manchild" type="checkbox" id="n"><label for="n" style="margin-right: 0">adidas by Strlla McCartney</label><br>
+                        <input name="manchild" type="checkbox" id="o"><label for="">adidas neo</label><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="main-section">
+            <div class="main-section-top">
+
+            </div>
+            
+            <div class="main-section-center" id="list-container">
+                
+            </div>   
+                <script type="text/html" id="list-template">
+                    {{each list itme}}
+                        <div class="main-section-center-div">
+                            <a href="./particulars.html?id={{itme.id}}">
+                                <img src='{{itme.imgs}}' alt="">
+                                <ul>
+                                    <li class="ul-king">{{itme.name}}</li>
+                                    <li class="ul-name">{{itme.info}}</li>
+                                    <li class="ul-money">￥<span>{{itme.price}}</span></li>
+                                    <li class="ul-comment">
+                                        <i class="iconfont icon-xing"></i>
+                                        <i class="iconfont icon-xing"></i>
+                                        <i class="iconfont icon-xing"></i>
+                                        <i class="iconfont icon-xing"></i>
+                                        <i class="iconfont icon-xing"></i>
+                                        <span>{{itme.evaluate}}</span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                    {{/each}}
+                </script>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="text/javascript">
+        $(function () { $('#collapseFour').collapse('show')});
+        $(function () { $('#collapseTwo').collapse('show')});
+        $(function () { $('#collapseThree').collapse('show')});
+        $(function () { $('#collapseOne').collapse('show')});
+    </script>  
+    <script src="/libs/require/require.min.js" data-main="/js/shopping"></script>
+</body>
+</html>

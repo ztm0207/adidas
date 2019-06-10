@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  ul,ol li {
+    list-style: none;
+  }
+  img {
+    vertical-align: top;
+  }
+  a {
+    text-decoration: none !important;
+  }
+@import './model/header.scss';
+@import './model/footer.scss';
+
+main{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    min-height: 200px;
+    padding-top: 30px;
+    .car-main-left{
+        width:900px;
+        height: 900px;
+        background: red; 
+        float:left;
+        .car-main-left-top{
+            height: 60px;
+            background: gray;
+            text-align: center;
+            h2{
+                float: left;
+                span{
+                    font-size: 16px;
+                    i{
+                        font-style: normal;
+                        font-weight: normal;
+                    }
+                }
+            }
+            a{
+                color: black;
+                float:right;
+                text-decoration: underline !important;
+            }
+        }
+    }
+    .car-main-right{
+        width: 280px;
+        height: 200px;
+        background:green; 
+        float:right;
+    }
+}
