@@ -1,10 +1,14 @@
 require(['./config'], () => {
     // 引入config以后就有短名称了
-    require(['template','url','header', 'footer'],(template,url,header) => {
+    require(['template','url','header', 'footer','bootstrap','rem'],(template,url,header) => {
       // 写首页逻辑
       class Shopping{
         constructor () {
           this.hot();
+          $(function () { $('#collapseFour').collapse('show')});
+          $(function () { $('#collapseTwo').collapse('show')});
+          $(function () { $('#collapseThree').collapse('show')});
+          $(function () { $('#collapseOne').collapse('show')});
         }
         hot () {
           // 负责渲染热销模块

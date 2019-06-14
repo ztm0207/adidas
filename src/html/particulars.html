@@ -5,35 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>就是仿阿迪</title>
+    <link rel = "icon" type = "image/x-icon" href="/imgs/adiwang.gif">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../libs/font/iconfont.css">
-    <script src="../libs/magnifying/jquery.min.js"></script>
-    <script src="../libs/magnifying/jquery.etalage.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function($){
-            $('#example3').etalage({
-                thumb_image_width: 446,
-                thumb_image_height: 400,
-                source_image_width:892,
-                source_image_height: 800,
-                zoom_area_width: 500,
-                zoom_area_height: 500,
-                zoom_area_distance: 5,
-                small_thumbs: 4,
-                smallthumb_inactive_opacity: 0.3,
-                smallthumbs_position: 'left',
-                show_icon: false,
-                autoplay: false,
-                keyboard: false,
-                zoom_easing: false
-            });
-        
-        });
-        </script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    
-    <script src="../libs/font/rem.js"></script>
     <link rel="stylesheet" href="../css/particulars.css">
 </head>
 <body>
@@ -47,66 +21,72 @@
             </ul>
         </div>
     </div>    
-    <main>  
+    <main id="list-container">  
+    </main>
+    <script type="text/html"  id="list-template">
             <div class="mian-top">
                     <div class="mian-top-img">
                      <div id="examples">
                          <ul id="example3">
                              <li>
-                                 <img class="etalage_thumb_image" src='{{itme.imga}}'/>
-                                 <img class="etalage_source_image" src='{{itme.imga}}'/>
+                                 <img class="etalage_thumb_image" src='{{list.imga}}'/>
+                                 <img class="etalage_source_image" src='{{list.imga}}'/>
                              </li>
                              <li>
-                                 <img class="etalage_thumb_image" src='{{itme.imgb}}'/>
-                                 <img class="etalage_source_image" src='{{itme.imgb}}'/>
+                                 <img class="etalage_thumb_image" src='{{list.imgb}}'/>
+                                 <img class="etalage_source_image" src='{{list.imgb}}'/>
                              </li>
                              <li>
-                                 <img class="etalage_thumb_image" src='{{itme.imgc}}'/>
-                                 <img class="etalage_source_image" src='{{itme.imgc}}'/>
+                                 <img class="etalage_thumb_image" src='{{list.imgc}}'/>
+                                 <img class="etalage_source_image" src='{{list.imgc}}'/>
                              </li>
                              <li>
-                                 <img class="etalage_thumb_image" src='{{itme.imgd}}'/>
-                                 <img class="etalage_source_image" src='{{itme.imgd}}'/>
+                                 <img class="etalage_thumb_image" src='{{list.imgd}}'/>
+                                 <img class="etalage_source_image" src='{{list.imgd}}'/>
                              </li>
                              <li>
-                                 <img class="etalage_thumb_image" src='{{itme.imge}}' />
-                                 <img class="etalage_source_image" src='{{itme.imge}}'/>
+                                 <img class="etalage_thumb_image" src='{{list.imge}}' />
+                                 <img class="etalage_source_image" src='{{list.imge}}'/>
                              </li>
                          </ul>
                      </div>
                     </div>
                     <div class="mian-top-buy">
-                         <p><span>{{itme.name}}</span></p>
-                         <p>TEMPER RUN PRIDE 经典鞋</p>
-                         <p>¥<span>1099</span></p>
-                         <p>选择样式</p>
-                         <p></p>
+                         <p class="p1"><span>{{list.name}}</span></p>
+                         <p class="p2">{{list.maxname}}</p>
+                         <p class="p3">¥<span>{{list.price}}</span></p>
+                             <select name="" id="" class="select1">
+                                    <<option>36码</option>
+                                    <option>37码</option>
+                                    <option>38码</option>
+                                    <option>39码</option>
+                                    <option>40码</option>
+                                    <option>41码</option>
+                                    <option>42码</option>
+                                    <option>43码</option>
+                                    <option>44码</option>
+                                    <option>45码</option>
+                             </select>
+                             <select name="" id="select1" class="select2">
+                                    <option value="1">1双</option>
+                                    <option value="2">2双</option>
+                                    <option value="3">3双</option>
+                                    <option value="4">4双</option>
+                                    <option value="5">5双</option>
+                                    <option value="6">6双</option>
+                                    <option value="7">7双</option>
+                                    <option value="8">8双</option>
+                                    <option value="9">9双</option>
+                             </select>
+                             <button id="car-btn">加入购物</button>
+                             <a href="./car.html" class="class-a">快去结账了</a>
                     </div> 
                  </div>
                  <div class="mian-bottom">
-                     <ul id="myTab" class="nav nav-tabs">
-                         <li class="active">
-                               <a href="#home" data-toggle="tab" class="main-bottom-a"style="margin-left:181.5px">
-                              商品描述
-                                 </a>
-                        </li>
-                        <li>
-                            <a href="#ios" data-toggle="tab" class="main-bottom-a">
-                                商品评价(<span>255</span>)
-                             </a>
-                         </li>
-                     </ul>
-                 
-                     <div id="myTabContent" class="tab-content">
-                         <div class="tab-pane fade in active" id="home">
-                             <p>菜鸟教程。</p>
-                         </div>
-                         <div class="tab-pane fade" id="ios">
-                             <p>iOS 是一个由苹果公司</p>
-                         </div>
-                     </div>
+                    <img src="{{list.maximg}}" alt="">
+                    <p>{{list.nameString}}</p>
                  </div>
-    </main>
+    </script>
     <footer></footer>
     <script src="/libs/require/require.min.js" data-main="/js/particulars"></script>
 </body>

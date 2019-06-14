@@ -5,59 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>就是仿阿迪</title>
+    <link rel = "icon" type = "image/x-icon" href="imgs/adiwang.gif">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../libs/font/iconfont.css">
-    <script src="../libs/font/rem.js"></script>
+    <link rel="stylesheet" href="libs/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header id="header">
         <div class=".header"></div>
     </header>
-    <main>
+    <main id="list-container">
+    </main>
+    <script type="text/html" id="list-template">
         <section class="video1" >
             <video autoplay muted loop="loop" src="https://cm15-c110-2.play.bokecc.com/flvs/ca/Qx4VH/ueMe4Broep-30.mp4?t=1561596424&key=E8830280A03DF6614276813F92DA84C8&tpl=10"></video>
         </section>
         <section class="img-one">
-            <a href="" class="one-left"></a>
-            <a href="" class="one-right"></a>
+            <a href="/html/shopping.html" class="one-left"><img src="{{list.mimga}}" alt=""></a>
+            <a href="/html/shopping.html" class="one-right"><img src="{{list.mimgb}}" alt=""></a>
         </section>
         <section class="video2">
             <video autoplay muted loop="loop" src="https://cm15-c110-2.play.bokecc.com/flvs/ca/Qx4tq/u1TjiRB1VS-30.mp4?t=1561605223&key=E8387A557B1FA766702B5CE4A40C042F&tpl=10"></video>
         </section>
         <section class="img-twe">
-            <a href="" class="twe-left"></a>
-            <a href="" class="twe-right"></a>
+            <a href="/html/shopping.html" class="twe-left"><img src="{{list.mimgc}}" alt=""></a>
+            <a href="/html/shopping.html" class="twe-right"><img src="{{list.mimgd}}" alt=""></a>
         </section>
         <section class="img-three">
-            <a href="" class="three-left"></a>
-            <a href="" class="three-right"></a>
+            <a href="/html/shopping.html" class="three-left"><img src="{{list.mimge}}" alt=""></a>
+            <a href="/html/shopping.html" class="three-right"><img src="{{list.mimgf}}" alt=""></a>
         </section>
+
         <section class="min-slide1">
-            <a href="" class=""></a>
-            <a href="" class=""></a>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="/html/shopping.html"><img src="{{list.ximga}}" alt=""class="img1"></a></div>
+                    <div class="swiper-slide"><a href="/html/shopping.html"><img src="{{list.ximgb}}" alt=""class="img2"></a></div>
+                    <div class="swiper-slide"><a href="/html/shopping.html"><img src="{{list.ximgc}}" alt=""class="img3"></a></div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>               
+            </div>
         </section>
+
         <section class="img-four">
-            <a href="" class="four-left"></a>
-            <a href="" class="four-right"></a>
+            <a href="/html/shopping.html" class="four-left"><img src="{{list.mimgh}}" alt=""></a>
+            <a href="/html/shopping.html" class="four-right"><img src="{{list.mimgg}}" alt=""></a>
         </section>
         <section class="min-slide2">
-            <a href="" class=""></a>
-            <a href="" class=""></a>
+            <section class="min-slide1">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="/html/shopping.html"><img src="{{list.ximgc}}" alt=""class="img1"></a></div>
+                        <div class="swiper-slide"><a href="/html/shopping.html"><img src="{{list.ximga}}" alt=""class="img2"></a></div>
+                        <div class="swiper-slide"><a href="/html/shopping.html"><img src="{{list.ximgb}}" alt=""class="img3"></a></div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>               
+                </div>
+            </section>
         </section>
         <section class="max-img">
-            <a href="" class="max-img-a"></a>
+            <a href="/html/shopping.html" class="max-img-a"><img src="{{list.ximgd}}" alt=""></a>
         </section>
         <section class="imgs">
-            <a href="" class="imgs-a"></a>
+            <a href="/html/shopping.html" class="imgs-a"><img src="{{list.ximge}}" alt=""></a>
         </section>
         <section class="text">
             <h6>SUMMER</h6>
             <p>再掀夏季潮流旋风</p>
         </section>
-    </main>
+    </script>
     <footer></footer>
     <script src="libs/require/require.min.js" data-main="js/index"></script>
 </body>

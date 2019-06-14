@@ -64,12 +64,29 @@ nav {
           a {
             color: #fff;
           }
+          .popup{
+          cursor:pointer;
+          }
         }
       }
     }
   }
   .nav-right-bottom {
     margin-bottom: 10px;
+    .cart-num{
+      position: relative;
+      display: block;
+      height: 30px;
+      width: 30px;
+      border-radius: 30px;
+      height: 30px;
+      width: 30px;
+      background:yellowgreen;
+      color:#fff;
+      text-align: center;
+      top: -45px;
+      left: 15px;
+    }
     .search {
       display: block;
       width: 30px;
@@ -165,6 +182,21 @@ nav .man ol li,.woman ol li,.children ol li,.exercise ol li{
     margin-left: 5px;
     color: #fff;
   }
+  .icon-chazhao{
+    cursor: pointer;
+  }
+  .ul-i{
+    display: none;
+    position: absolute;
+    top:70px;
+    left: 1030px;
+    li{
+      height: 30px;
+      width: 152px;
+      background: #fff;
+      border: 1px solid;
+    }
+  }
 }
 .shelter{
   position: fixed;
@@ -202,6 +234,7 @@ nav .man ol li,.woman ol li,.children ol li,.exercise ol li{
     line-height: 40px;
     text-align: center;
     background-color: #fff;
+    cursor:pointer;
   }
   .p-text{
     margin-top: 50px;
@@ -244,4 +277,11 @@ nav .man ol li,.woman ol li,.children ol li,.exercise ol li{
     color: #fff;
     border-radius: 50px;
   }
+  .nonep{
+    color: red;
+    position:absolute;
+    left:220px;
+    top:50px;
+  }
+
 }

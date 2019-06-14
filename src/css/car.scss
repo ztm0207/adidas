@@ -12,8 +12,8 @@
   a {
     text-decoration: none !important;
   }
-@import './model/header.scss';
-@import './model/footer.scss';
+  @import './model/header.scss';
+  @import './model/footer.scss';
 
 main{
     width: 1200px;
@@ -23,12 +23,10 @@ main{
     padding-top: 30px;
     .car-main-left{
         width:900px;
-        height: 900px;
-        background: red; 
+        min-height: 900px;
         float:left;
         .car-main-left-top{
             height: 60px;
-            background: gray;
             text-align: center;
             h2{
                 float: left;
@@ -45,12 +43,116 @@ main{
                 float:right;
                 text-decoration: underline !important;
             }
+            
         }
+        p{
+            input{
+                margin-left: -200px;
+                width: 30px;
+                height: 30px;
+                margin-top: 5px;
+            }
+            label{
+                margin-left: 10px;
+                font-size: 24px;
+                font-weight: 900;
+                line-height: 40px
+            }      
+        }
+        .car-main-left-detail{
+            height: 200px;
+            width: 900px;
+            border: 1px solid;
+            display: flex;
+            margin-bottom: 4px;
+            .left-detail-a{
+                margin-top: 90px;
+                height: 20px;
+                width: 20px;
+                margin-left: 5px;
+            }
+            .left-detail-b{
+               margin-top: 25px;
+               margin-left: 20px;
+               margin-right: 10px;
+               width: 150px;
+               height: 150px;
+               background-color: #fff;
+            }
+            .left-detail-c{
+                width: 500px;
+                height: 150px;
+                margin-top: 25px;
+                background-color: #fff;
+                margin-right: 10px;
+                .p1{
+                    margin-top: 15px;
+                    font-size: 14px;
+                }
+                .p2{
+                    margin-top: 15px;
+                    font-size: 20px;
+                    margin-bottom: 25px;
+                }
+                .btn{
+                    width: 80px;
+                    height:30px;
+                    background: #000;
+                    border: none;
+                    color: #fff;
+                    outline: none;
+                }
+            }
+            .left-detail-d{
+                padding-top:60px; 
+                width: 180px;
+                height: 150px;
+                margin-top: 25px;
+                background-color: #fff;
+                font-size: 14px;
+                select{
+                    width: 90px;
+                    font-size: 18px;
+                    padding-left:20px; 
+                }
+            }
+        } 
     }
     .car-main-right{
         width: 280px;
         height: 200px;
-        background:green; 
+        background-color: #000;
+        color: #fff;
         float:right;
+        padding-left: 20px;
+        padding-top: 5px;
+        .right-p1{
+            margin-top: 15px;
+            font-size: 18px;
+            span{
+                padding-left: 12px;
+                font-size: 20px;
+                font-weight: 900;
+            }
+        }
+        .right-p2{
+            margin-top: 15px;
+            font-size: 18px; 
+            span{
+                padding-left: 12px;
+                font-size: 20px;
+                font-weight: 900;
+            }
+        }
+        .right-btn{
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            font-size: 24px;
+            font-weight: 900;
+        }  
     }
 }

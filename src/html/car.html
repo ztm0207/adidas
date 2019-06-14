@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>就是仿阿迪</title>
+    <link rel = "icon" type = "image/x-icon" href="/imgs/adiwang.gif">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../libs/font/iconfont.css">
-    <script src="../libs/font/rem.js"></script>
     <link rel="stylesheet" href="../css/car.css">
 </head>
 <body>
@@ -16,12 +17,51 @@
     <main>
         <div class="car-main-left">
             <div class="car-main-left-top">
-                <h2>你的购物车<span>共<i> 2 </i>件</span></h2>
+                <h2>你的购物车<span>共选中 <i id="car-main-left-top-i"style="font-size:24px"></i>件</span></h2>
                 <a href="../index.html">继续购物</a>
             </div>
-            
+            <p>
+                <input type="checkbox" id="maxcheckbox">
+                <label for="checkbox-sum" id="checkbox-sum">全选</label>
+            </p>
+            <div id="list-container">
+            </div>
+            <script type="text/html"  id="list-template">
+                {{each list itme}}
+                <div class="car-main-left-detail" id="left-detail-div" productId="{{itme.id}}">
+                <input type="checkbox" class="left-detail-a" id="mincheck">
+                <img src="{{itme.imga}}" class="left-detail-b">
+                <div class="left-detail-c">
+                    <p class="p1">{{itme.name}}</p>
+                    <p class="p2">{{itme.maxname}}</p>
+                    <button class="btn" id="left-detail-btn">删除</button>
+                </div>
+                <div class="left-detail-d">
+                    ￥ <span id="left-detail-span">{{itme.price}}</span> *
+                    <select name="" id="left-detail-select" value="{{itme.num}}">
+                        <option value="{{itme.num}}">{{itme.num}}双</option>
+                        <option value="1">1双</option>
+                        <option value="2">2双</option>
+                        <option value="3">3双</option>
+                        <option value="4">4双</option>
+                        <option value="5">5双</option>
+                        <option value="6">6双</option>
+                        <option value="7">7双</option>
+                        <option value="8">8双</option>
+                        <option value="9">9双</option>
+                    </select>
+                    <span id="left-detail-d-span" style="display:none;"></span>
+                </div>
+            </div>
+            {{/each}}
+            </script>
         </div>
-        <div class="car-main-right"></div>
+        <div class="car-main-right">
+            <h1>给钱了！</h1>
+            <p class="right-p1">订单摘要: 共 <span id="car-main-right-p1"></span> 件</p>
+            <p class="right-p2">商品金额：￥<span id="car-main-right-p2"></span>元</p>
+            <button class="right-btn">结算</button>
+        </div>
     </main>
     <footer></footer>
     <script src="/libs/require/require.min.js" data-main="/js/Car"></script>

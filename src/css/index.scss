@@ -54,7 +54,6 @@ main {
     .max-img-a {
       display: block;
       height: 474px;
-      background: url(../imgs/maximg.gif) no-repeat;
     }
   }
   .imgs {
@@ -65,7 +64,6 @@ main {
       height: 490px;
       width: 974px;
       margin: 0 auto;
-      background: url(../imgs/imgs.gif) no-repeat;
       margin-bottom: 28px;
     }
   }
@@ -96,13 +94,11 @@ main .img-one .one-left, .img-twe .twe-left, .img-three .three-left, .img-four .
   float: left;
   height: 395px;
   width: 595.5px;
-  background: url(../imgs/sy.gif) no-repeat;
 }
 main .img-one .one-right, .img-twe .twe-right, .img-three .three-right, .img-four .four-right {
   float: right;
   height: 395px;
   width: 595.5px;
-  background: url(../imgs/sy.gif) no-repeat;
 }
 main .img-one .one-left:hover, .img-twe .twe-left:hover, .img-three .three-left:hover, .img-four .four-right:hover {
   box-shadow: 2px 2px 2px #867c7c;
@@ -115,6 +111,20 @@ main .img-one .one-right:hover, .img-twe .twe-right:hover, .img-three .three-rig
 main .min-slide1, .min-slide2 {
   height: 290px;
   padding: 28px 24px 40px 24px;
-  background: #ccc;
+}
+.img1{
+  display: block;
+  width:100%;
+  height: 222px;
+}
+.img2{
+  display: block;
+  width:100%;
+  height: 222px;
+}
+.img3{
+  display: block;
+  width:100%;
+  height: 222px;
 }
 /*# sourceMappingURL=index.css.map */
