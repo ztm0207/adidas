@@ -82,6 +82,8 @@ main {
       .main-section-center-div {
         width: 230px;
         height: 390px;
+        border: 1px solid #ccc;
+        margin-bottom: 4px;
         a {
           display: block;
           width: 100%;
@@ -112,6 +114,12 @@ main {
           }
         }
       }
+      
     }
+  }
+  .main-section-center-div:hover {
+    box-shadow: 2px 2px 2px #867c7c;
+    transition: 0.1s;
+    border: 1px solid;
   }
 }

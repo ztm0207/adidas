@@ -66,7 +66,9 @@ require(['./config'], () => {
             }else{
               $('#left-detail-div input').each((index, item)=>{
                 item.checked = false
-                $("#car-main-right-p2").html(0) 
+                $("#car-main-right-p2").html(0)
+                $("#car-main-right-p1").html(0)
+                $("#car-main-left-top-i").html(0) 
               })
             }
         })
@@ -88,11 +90,16 @@ require(['./config'], () => {
         }
         hvalue() {
          let b=0;
+         let a=0;
          let _this=this;
           $('#left-detail-div input').each((index, item)=>{
             if(item.checked==true){
-                b+=Number($(item).next().next().next().children("#left-detail-d-span").text())
+              b+=Number($(item).next().next().next().children("#left-detail-d-span").text())
               $("#car-main-right-p2").html(b)
+              a+=Number($(item).next().next().next().children("#left-detail-select").val())
+              
+              $("#car-main-right-p1").html(a)
+              $("#car-main-left-top-i").html(a)  
               
               $($(item).next().next().next().children("#left-detail-select")).on('change',function(){
                 let sum = $(this).val()*$(this).prev().text()
@@ -103,17 +110,23 @@ require(['./config'], () => {
           })
         }
         Allspan(){
-          let b=0
+          let b=0;
+          let max=0;
           $('#left-detail-div input').each((index, item)=>{
             if(item.checked==true){
-                b+=Number($(item).next().next().next().children("#left-detail-d-span").text())
-              $("#car-main-right-p2").html(b)
-              
+              b+=Number($(item).next().next().next().children("#left-detail-d-span").text())
+              $("#car-main-right-p2").html((b).toFixed(1));
+              max+=Number($(item).next().next().next().children("#left-detail-select").val())
+              $("#car-main-right-p1").html(max)
+              $("#car-main-left-top-i").html(max) 
             }
           })
+
+           
         }
         eachvalue(){
             let maxsum=0;
+            let maxid=0;
             let n=0
             let m=0
             //给每个选择框一个点击事件
@@ -123,17 +136,26 @@ require(['./config'], () => {
                 maxsum+=Number($(item).text())
               })
               $("#car-main-right-p2").html((maxsum).toFixed(1)) 
-              
+              $('#left-detail-div #left-detail-select').each((index, item)=>{
+                maxid+=Number($(item).val())
+              })
+              $("#car-main-right-p1").html(maxid)
+              $("#car-main-left-top-i").html(maxid)  
+
             $('#left-detail-div #left-detail-select').on('change',function(){
             let sum = $(this).val()*$(this).prev().text()
             $(this).next().html((sum).toFixed(1))
             maxsum=0;
-
+            maxid=0;
             $('#left-detail-div #left-detail-d-span').each((index, item)=>{
               maxsum+=Number($(item).text())
             })
             $("#car-main-right-p2").html((maxsum).toFixed(1)) 
-          
+            $('#left-detail-div #left-detail-select').each((index, item)=>{
+              maxid+=Number($(item).val())
+            })
+            $("#car-main-right-p1").html(maxid)
+            $("#car-main-left-top-i").html(maxid) 
           }) 
         }
       }
