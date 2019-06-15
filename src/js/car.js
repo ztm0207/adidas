@@ -73,7 +73,8 @@ require(['./config'], () => {
             }
         })
         $('#left-detail-div input').click(function() {
-          _this.hvalue()
+          _this.hvalue();
+         
             let  key = 0
           $('#left-detail-div input').each((index, item)=>{
             if(item.checked==true){
@@ -86,6 +87,11 @@ require(['./config'], () => {
           }else{
             $("#maxcheckbox")[0].checked= false
           }
+          if(key==0){
+            $("#car-main-right-p2").html(0)
+            $("#car-main-right-p1").html(0)
+            $("#car-main-left-top-i").html(0) 
+          }
         })
         }
         hvalue() {
@@ -97,10 +103,8 @@ require(['./config'], () => {
               b+=Number($(item).next().next().next().children("#left-detail-d-span").text())
               $("#car-main-right-p2").html(b)
               a+=Number($(item).next().next().next().children("#left-detail-select").val())
-              
               $("#car-main-right-p1").html(a)
               $("#car-main-left-top-i").html(a)  
-              
               $($(item).next().next().next().children("#left-detail-select")).on('change',function(){
                 let sum = $(this).val()*$(this).prev().text()
                 $(this).next().html((sum).toFixed(1))
@@ -109,6 +113,7 @@ require(['./config'], () => {
             }
           })
         }
+        
         Allspan(){
           let b=0;
           let max=0;
